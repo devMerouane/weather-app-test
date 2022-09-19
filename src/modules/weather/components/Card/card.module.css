@@ -1,0 +1,64 @@
+.container {
+  width: 45rem;
+  border-radius: 0.6rem;
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+  color: #fff;
+  background-color: #333;
+  margin: 2rem auto 0 auto;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city {
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.icon {
+  width: 10rem;
+  object-fit: cover;
+}
+
+.temperature {
+  font-weight: 600;
+  font-size: 6rem;
+  width: auto;
+  margin: 1rem 0;
+}
+
+.details {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.value {
+  text-align: right;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
