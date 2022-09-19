@@ -1,35 +1,14 @@
 import React, { useState } from 'react';
-import { useQuery } from 'react-query';
-import axios from 'axios';
 
 import styles from './weather.module.css';
 import { Search, Button, Card, Message, Loader } from '../../components';
+import { useFetchCity } from '../../hooks/useFetchCity';
 
 const WeatherContainer = () => {
   const [city, setCity] = useState('');
   const disable = city.length === 0;
 
-  const handleFetch = async () => {
-    const response = await axios.get(
-      `${
-        import.meta.env.VITE_OPEN_WEATHER_URL
-      }/data/2.5/weather?q=${city}&appid=${
-        import.meta.env.VITE_APP_ID
-      }&units=metric`
-    );
-
-    return response.data;
-  };
-
-  const { isLoading, data, refetch, error, isFetching } = useQuery<any, any>(
-    city,
-    handleFetch,
-    {
-      enabled: false,
-      retry: false,
-    }
-  );
-
+  const { isLoading, data, refetch, error, isFetching } = useFetchCity(city);
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     setCity(event.currentTarget.value);
   };
