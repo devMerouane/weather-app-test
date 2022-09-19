@@ -1,0 +1,40 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended", "plugin:import/typescript", "prettier", "plugin:prettier/recommended"],
+  "ignorePatterns": ["vite.config.ts"],
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "no-else-return": ["error", { "allowElseIf": true }],
+    "no-shadow": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-use-before-define": "off",
+    "react/prop-types": "off",
+    "import/export": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/function-component-definition":  [2, { "namedComponents": "arrow-function" }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-shadow": "error",
+    "prettier/prettier": ["error", { "singleQuote": true, "parser": "typescript" }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
