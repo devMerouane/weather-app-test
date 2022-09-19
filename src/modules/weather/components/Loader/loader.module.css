@@ -1,0 +1,8 @@
+.container{
+text-align: center;
+}
+.loader{
+  font-weight: 600;
+  font-size: 6rem;
+  color: white;
+}
