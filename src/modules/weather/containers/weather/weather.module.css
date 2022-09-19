@@ -1,0 +1,13 @@
+.search_container {
+  display: flex;
+  justify-content: center;
+}
+.display_container{
+  margin: 15rem auto 0rem auto;
+}
+.error_container{
+  background-color: #fed5d5;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 0.7rem;
+}
