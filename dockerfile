@@ -2,7 +2,7 @@ FROM node:16.17.0-alpine
 
 WORKDIR /weather-app-test
 
-COPY packages.json ./
+COPY package.json ./
 
 RUN yarn
 
